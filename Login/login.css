@@ -35,6 +35,26 @@ section{
 	}
 }
 
+.formbox2{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background: rgba(0, 0, 0, 0.25);;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-image: conic-gradient(from var(--angle), black, white) 1;
+	
+	animation: 50s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
 @property --angle {
   syntax: '<angle>';
   initial-value: 0deg;
@@ -109,7 +129,7 @@ input:focus ~ :valid{
     text-decoration: underline;
 }
 
-button{
+#loginbutton{
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -121,7 +141,23 @@ button{
     font-weight: 600;
 }
 
-button:hover{
+#loginbutton:hover{
+    background: hsla(208, 100%, 97%, 0.25);
+}
+
+#registerbutton{
+    width: 80%;
+    height: 30px;
+    border-radius: 40px;
+    background: hsla(208, 100%, 97%, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+#registerbutton:hover{
     background: hsla(208, 100%, 97%, 0.25);
 }
 
